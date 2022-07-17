@@ -52,4 +52,8 @@ void quick_sort_hoare(int *array, size_t size);
 void hoare_sort(int *array, size_t size, int left, int right);
 int hoare_partition(int *array, size_t size, int left, int right);
 
+void swap_ints(int *a, int *b);
+void max_heapify(int *array, size_t size, size_t base, size_t root);
+void heap_sort(int *array, size_t size);
+
 #endif
