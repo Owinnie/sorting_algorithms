@@ -51,9 +51,9 @@ void q_s_algo(int *arr, int left, int right, size_t size)
 
 	if (left < right)
 	{
-		pivot = split(arr, left, right, size);
-		sort_alg(arr, left, pivot - 1, size);
-		sort_alg(arr, pivot + 1, right, size);
+		pivot = partition(arr, left, right, size);
+		q_s_algo(arr, left, pivot - 1, size);
+		q_s_algo(arr, pivot + 1, right, size);
 	}
 }
 /**
@@ -65,5 +65,5 @@ void quick_sort(int *array, size_t size)
 {
 	if (array == NULL || size <= 1)
 		return;
-	sort_alg(array, 0, size - 1, size);
+	q_s_algo(array, 0, size - 1, size);
 }
