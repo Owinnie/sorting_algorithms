@@ -28,9 +28,9 @@ int hoare_partition(int *array, size_t size, int left, int right)
 
 		if (above < below)
 		{
-      tmp = array[above];
-      array[above] = array[below];
-      array[below] = tmp;
+			tmp = array[above];
+			array[above] = array[below];
+			array[below] = tmp;
 			print_array(array, size);
 		}
 	}
